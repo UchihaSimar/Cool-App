@@ -4,8 +4,9 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
-    "start": "webpack serve  --mode development --inline --content-base ./public ",
-    "heroku-postbuild": "npm install --dev"
+    "serve": "webpack serve  --mode development --inline --content-base ./public ",
+    "heroku-postbuild": "npm install --dev && npm run build",
+    "start": "node server.js"
   },
   "keywords": [],
   "author": "",
@@ -13,6 +14,7 @@
   "description": "",
   "dependencies": {
     "core-js": "^3.13.0",
+    "express": "^4.17.1",
     "vue": "^2.6.12",
     "vue-i18n": "^8.24.4",
     "vue-router": "^3.5.1"

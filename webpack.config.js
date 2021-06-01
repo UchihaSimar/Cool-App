@@ -90,7 +90,7 @@ module.exports = {
     },
   },
   devServer: {
-    port:process.env.PORT
+    port:process.env.PORT,
     historyApiFallback: true,
   },
 };
